@@ -1,0 +1,44 @@
++--------+-----------+------------------------+------------------+------------------------------------------------------------------------+------------+
+| Domain | Method    | URI                    | Name             | Action                                                                 | Middleware |
++--------+-----------+------------------------+------------------+------------------------------------------------------------------------+------------+
+|        | GET|HEAD  | /                      |                  | Closure                                                                | web        |
+|        | GET|HEAD  | alumno                 | alumno.index     | App\Http\Controllers\AlumnoController@index                            | web        |
+|        | POST      | alumno                 | alumno.store     | App\Http\Controllers\AlumnoController@store                            | web        |
+|        | GET|HEAD  | alumno/create          | alumno.create    | App\Http\Controllers\AlumnoController@create                           | web        |
+|        | GET|HEAD  | alumno/{alumno}        | alumno.show      | App\Http\Controllers\AlumnoController@show                             | web        |
+|        | PUT|PATCH | alumno/{alumno}        | alumno.update    | App\Http\Controllers\AlumnoController@update                           | web        |
+|        | DELETE    | alumno/{alumno}        | alumno.destroy   | App\Http\Controllers\AlumnoController@destroy                          | web        |
+|        | GET|HEAD  | alumno/{alumno}/edit   | alumno.edit      | App\Http\Controllers\AlumnoController@edit                             | web        |
+|        | GET|HEAD  | alumnolista            |                  | App\Http\Controllers\AlumnoController@Listar                           | web        |
+|        | GET|HEAD  | api/user               |                  | Closure                                                                | api        |
+|        |           |                        |                  |                                                                        | auth:api   |
+|        | GET|HEAD  | curso                  | curso.index      | App\Http\Controllers\CursoController@index                             | web        |
+|        | POST      | curso                  | curso.store      | App\Http\Controllers\CursoController@store                             | web        |
+|        | GET|HEAD  | curso/create           | curso.create     | App\Http\Controllers\CursoController@create                            | web        |
+|        | GET|HEAD  | curso/{curso}          | curso.show       | App\Http\Controllers\CursoController@show                              | web        |
+|        | PUT|PATCH | curso/{curso}          | curso.update     | App\Http\Controllers\CursoController@update                            | web        |
+|        | DELETE    | curso/{curso}          | curso.destroy    | App\Http\Controllers\CursoController@destroy                           | web        |
+|        | GET|HEAD  | curso/{curso}/edit     | curso.edit       | App\Http\Controllers\CursoController@edit                              | web        |
+|        | GET|HEAD  | cursolista             |                  | App\Http\Controllers\CursoController@Listar                            | web        |
+|        | GET|HEAD  | docente                |                  | App\Http\Controllers\DocenteController@index                           | web        |
+|        | GET|HEAD  | docentelista           |                  | App\Http\Controllers\DocenteController@Listar                          | web        |
+|        | GET|HEAD  | home                   | home             | App\Http\Controllers\HomeController@index                              | web        |
+|        |           |                        |                  |                                                                        | auth       |
+|        | GET|HEAD  | login                  | login            | App\Http\Controllers\Auth\LoginController@showLoginForm                | web        |
+|        |           |                        |                  |                                                                        | guest      |
+|        | POST      | login                  |                  | App\Http\Controllers\Auth\LoginController@login                        | web        |
+|        |           |                        |                  |                                                                        | guest      |
+|        | POST      | logout                 | logout           | App\Http\Controllers\Auth\LoginController@logout                       | web        |
+|        | GET|HEAD  | password/confirm       | password.confirm | App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm    | web        |
+|        |           |                        |                  |                                                                        | auth       |
+|        | POST      | password/confirm       |                  | App\Http\Controllers\Auth\ConfirmPasswordController@confirm            | web        |
+|        |           |                        |                  |                                                                        | auth       |
+|        | POST      | password/email         | password.email   | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web        |
+|        | GET|HEAD  | password/reset         | password.request | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web        |
+|        | POST      | password/reset         | password.update  | App\Http\Controllers\Auth\ResetPasswordController@reset                | web        |
+|        | GET|HEAD  | password/reset/{token} | password.reset   | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web        |
+|        | GET|HEAD  | register               | register         | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web        |
+|        |           |                        |                  |                                                                        | guest      |
+|        | POST      | register               |                  | App\Http\Controllers\Auth\RegisterController@register                  | web        |
+|        |           |                        |                  |                                                                        | guest      |
++--------+-----------+------------------------+------------------+------------------------------------------------------------------------+------------+
